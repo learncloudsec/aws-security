@@ -13,13 +13,13 @@ Prerequisites:
 To deploy from a Windows 10 environment as the admin user:
 
 ```
-$ git clone https://github.com/Celidor/aws-security
+$ git clone https://github.com/learncloudsec/aws-security
 
 PS C:\Users\admin> cd aws-security
 PS C:\Users\admin\aws-security> terraform plan -var environment={your_aws_environment_name}
 PS C:\Users\admin\aws-security> terraform apply -var environment={your_aws_environment_name}
 ```
-To test the environment, browse to: www.{your_aws_environment_name}.{root domain}, e.g. www.csa1.celidor.io
+To test the environment, browse to: www.{your_aws_environment_name}.{root domain}, e.g. www.csa1.learncloudsec.net
 
 To destroy the environment:
 
