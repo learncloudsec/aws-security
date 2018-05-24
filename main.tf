@@ -11,7 +11,7 @@ resource "aws_vpc" "aws-security" {
   }
 }
 
-# Create an internet gateway to give our subnet access to the outside world
+# Create an internet gateway to give our subnet access to the outside world 
 resource "aws_internet_gateway" "aws-security" {
   vpc_id = "${aws_vpc.aws-security.id}"
   tags {
@@ -70,12 +70,12 @@ resource "aws_security_group" "aws-security" {
   description = "Security group to access instance directly"
   vpc_id      = "${aws_vpc.aws-security.id}"
 
-  # SSH access from anywhere
+  # SSH access from specific IP
   ingress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["83.105.133.88/32"]
   }
 
   # HTTP access from the VPC
