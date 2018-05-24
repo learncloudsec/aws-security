@@ -75,7 +75,7 @@ resource "aws_security_group" "aws-security" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["192.168.254.13/32"]
+    cidr_blocks = ["83.105.133.88/32"]
   }
 
   # HTTP access from the VPC
