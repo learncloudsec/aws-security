@@ -4,6 +4,8 @@ packages:
  - nginx-full
 
 runcmd:
+ - yum update -y 
+ -yum upgrade -y
  - service nginx start
 
 output: { all: '| tee -a /var/log/cloud-init-output.log' }
