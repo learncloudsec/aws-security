@@ -29,3 +29,9 @@ variable "domain" {
   description = "root domain"
   default     = "learncloudsec.net"
 }
+
+
+variable "myip" {
+   description = "my ip address"
+   default = "83.105.133.88/32"
+}
