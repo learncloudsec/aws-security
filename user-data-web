@@ -4,6 +4,8 @@ packages:
  - nginx-full
 
 runcmd:
+ - apt -y update
+ - apt -y upgrade
  - service nginx start
 
 output: { all: '| tee -a /var/log/cloud-init-output.log' }
